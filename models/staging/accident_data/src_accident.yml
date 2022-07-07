@@ -1,0 +1,41 @@
+version: 2
+
+sources:
+    - name: accident_data
+      database: pivotal-purpose-347613
+      schema: data_extract
+      tables:
+        - name: accident_16
+        
+models:
+    - name: stg_accident_16
+      description: > 
+        Annual road casualty statistics are published twice each year. 
+        Provisional results are published in May for the first release of key statistics, 
+        and final detailed statistics are released in September. In-year estimates, providing 
+        provisional figures for the first half of the year, 
+        are usually published in November.Estimates of drink-drive accidents and casualties are 
+        published separately, provisionally in February with final figures in August.
+      columns:
+        - name: accident_index
+          description: Primary key for this table was generated from the data source and was tested using unique and null test. 
+          tests:
+              - unique:
+                  severity: warn
+              - not_null:
+                  severity: warn
+        - name: accident_index
+          tests:
+              - relationships:
+                  to: ref('stg_casualty_16')
+                  field: accident_index
+        - name: accident_index
+          tests:
+              - relationships:
+                  to: ref('stg_vehicle_16')
+                  field: accident_index
+
+
+
+
+    

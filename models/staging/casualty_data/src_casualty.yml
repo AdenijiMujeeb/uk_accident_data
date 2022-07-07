@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+    - name: casualty_data
+      database: pivotal-purpose-347613
+      schema: data_extract
+      tables:
+           - name: casualty_16
+
+# models:
+#     - name: stg_casualty_16
+#       columns:
+#         - name: age_of_casualty
+#           tags: [not_accepted_test]
+#           tests:
+#             - dbt_utils.not_accepted_values:
+#                 values: ['-1']
+
+      
+
+
+    
+
+
+  

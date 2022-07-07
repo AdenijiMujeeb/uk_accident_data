@@ -1,4 +1,4 @@
 {{ config(materialized='view') }}
 
 select *
-from {{ source('staging','vehicle_16') }}
+from {{ source('vehicle_data','vehicle_16') }}

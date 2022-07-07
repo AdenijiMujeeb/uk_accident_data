@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+    - name: vehicle_data
+      database: pivotal-purpose-347613
+      schema: data_extract
+      tables:
+           - name: vehicle_16
