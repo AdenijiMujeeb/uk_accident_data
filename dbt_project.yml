@@ -2,7 +2,11 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
+<<<<<<< HEAD
 name: 'uk_accident_data'
+=======
+name: 'my_new_project'
+>>>>>>> 2dd4d887b1c242cd183bd7a133311a86032bb514
 version: '1.0.0'
 config-version: 2
 
@@ -23,7 +27,10 @@ target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
+<<<<<<< HEAD
   - "logs"
+=======
+>>>>>>> 2dd4d887b1c242cd183bd7a133311a86032bb514
 
 
 # Configuring models
@@ -33,6 +40,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
+<<<<<<< HEAD
   uk_accident_data:
     # Applies to all files under models/example/
     example:
@@ -40,3 +48,9 @@ models:
 
 vars:
     "dbt_date:time_zone": "America/Los_Angeles"
+=======
+  my_new_project:
+    # Applies to all files under models/example/
+    example:
+      materialized: view
+>>>>>>> 2dd4d887b1c242cd183bd7a133311a86032bb514
