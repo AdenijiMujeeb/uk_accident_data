@@ -6,3 +6,23 @@ sources:
       schema: data_extract
       tables:
            - name: vehicle_16
+          
+models:
+    - name: stg_vehicle_16
+      description: > 
+        Annual road vehicle statistics are published twice each year. 
+        Provisional results are published in May for the first release of key statistics, 
+        and final detailed statistics are released in September. In-year estimates, providing 
+        provisional figures for the first half of the year, 
+        are usually published in November.Estimates of drink-drive accidents and casualties are 
+        published separately, provisionally in February with final figures in August.
+      columns:
+        - name: accident_index
+          description: Foreign key for this table was generated from the data source.
+        - name: Vehicle Reference
+          description: >
+            This is the column show vehicle reference.
+        - name: Casualty Reference
+          description: >
+            This is a column showing the casualty reference that had an accident.
+     
