@@ -10,7 +10,7 @@ sources:
 models:
     - name: stg_accident_16
       description: > 
-        Annual road casualty statistics are published twice each year. 
+        Annual road accident statistics are published twice each year. 
         Provisional results are published in May for the first release of key statistics, 
         and final detailed statistics are released in September. In-year estimates, providing 
         provisional figures for the first half of the year, 
@@ -34,8 +34,106 @@ models:
               - relationships:
                   to: ref('stg_vehicle_16')
                   field: accident_index
+        - name: Police Force
+          description: >
+            This is the column listing the Police Station in each accident location. it is
+            denoted with number from 1 - 98 which can be find in the look-up table.
+        - name: Accident Severity
+          description: >
+            This is a column showing the severity of the accident and it is denoted by 1 - 3 which can be 
+            found in the look-up table.
+        - name: Number of Vehicles
+          description: >
+            This is a column showing the number of number of vehicles that was involved in the accident.
+        - name: Number of Casualties
+          description: >
+            This is a column showing the number of casualties that was involved in the accident.
+        - name: Date
+          description: >
+            This is a column showing the date the accident occured.
+        - name: Day of Week
+          description: >
+            This is a column showing the day of week that the accident occured.
+        - name: Time
+          description: >
+            This is a column showing the time that the accident occured.
+        - name: Location Easting OSGR
+          description: >
+            This is a column showing the easting position that the accident occured.
+        - name: Location Northing OSGR
+          description: >
+            This is a column showing the northing position that the accident occured.
+        - name: Longitude
+          description: >
+            This is a column showing the longitude of where the accident occured.
+        - name: Latitude
+          description: >
+            This is a column showing the latitude of where the accident occured.
+        - name: Local Authority (District)
+          description: >
+            This is a column showing the district where the accident occured.
+        - name: Local Authority (Highway Authority - ONS code)
+          description: >
+            This is a column showing the city where the accident occured.
+        - name: 1st Road Class
+          description: >
+            This is a column showing the road class which is denoted by 1 - 6 from look-up table.
+        - name: 1st Road Number
+          description: >
+            This is a column showing the road number.
+        - name: Road Type
+          description: >
+            This is a column showing the road type and it is denoted from 1 - 12 from the table.
+        - name: Speed limit
+          description: >
+            This is a column showing the speed limit and it is denoted in figures which is available in the look-up table.
+        - name: Junction Detail
+          description: >
+            This is a column showing which junction the accident occured. it is denoted from 0 - 9 on the look-up table.
+        - name: Junction Control
+          description: >
+            This is a column showing which junction control was the accident occured. it is denoted from 0 - 4 on the look-up table.
+        - name: 2nd Road Class
+          description: >
+            This is a column showing the road class on which the accident occured. it is denoted from 0 - 6 on the look-up table.
+        - name: 2nd Road Number
+          description: >
+            This is a column showing the road number on which the accident occured.
+        - name: Pedestrian Crossing-Human Control
+          description: >
+            This is a column showing the pedestrain crossing human control on which the accident occured.
+        - name: Pedestrian Crossing-Physical Facilities
+          description: >
+            This is a column showing the pedestrian crossing-physical facilities on which the accident occured. 
+        - name: Light Conditions
+          description: >
+            This is a column showing the light conditions on which the accident occured. 
+        - name: Weather Conditions
+          description: >
+            This is a column showing the weather conditions on which the accident occured. 
+        - name: Road Surface Conditions
+          description: >
+            This is a column showing the road surface conditions on which the accident occured. 
+        - name: Special Conditions at Site
+          description: >
+            This is a column showing the special conditions at site on which the accident occured. 
+        - name: Carriageway Hazards
+          description: >
+            This is a column showing the carriageway hazards on which the accident occured. 
+        - name: Urban or Rural Area
+          description: >
+            This is a column showing the urban or rural Area on which the accident occured. 
+        - name: Did Police Officer Attend Scene of Accident
+          description: >
+            This is a column showing the police officer that attended the scene of accident on which the accident occured.
+        - name: Lower Super Ouput Area of Accident_Location (England & Wales only)
+          description: >
+            This is a column showing the lower super ouput area of accident location accident on which the accident occured. 
 
 
 
 
-    
+
+
+
+

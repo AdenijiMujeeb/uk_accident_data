@@ -7,14 +7,36 @@ sources:
       tables:
            - name: casualty_16
 
-# models:
-#     - name: stg_casualty_16
-#       columns:
-#         - name: age_of_casualty
-#           tags: [not_accepted_test]
-#           tests:
-#             - dbt_utils.not_accepted_values:
-#                 values: ['-1']
+models:
+    - name: stg_casualty_16
+      columns:
+        - name: age_of_casualty
+          tags: [not_accepted_test]
+          tests:
+            - dbt_utils.not_accepted_values:
+                values: ['-1']
+
+models:
+    - name: stg_casualty_16
+      description: > 
+        Annual road casualty statistics are published twice each year. 
+        Provisional results are published in May for the first release of key statistics, 
+        and final detailed statistics are released in September. In-year estimates, providing 
+        provisional figures for the first half of the year, 
+        are usually published in November.Estimates of drink-drive accidents and casualties are 
+        published separately, provisionally in February with final figures in August.
+      columns:
+        - name: accident_index
+          description: Foreign key for this table was generated from the data source.
+        - name: Vehicle Reference
+          description: >
+            This is the column show vehicle reference.
+        - name: Vehicle Type
+          description: >
+            This is a column showing the vehicle type that had an accident.
+        - name: Vehicle Type
+          description: >
+            This is a column showing the vehicle type that had an accident.
 
       
 
